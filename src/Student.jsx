@@ -17,17 +17,22 @@ class Student extends Component {
 
     }
 
-    changeState = (event)=>{
-        alert("event.target.value")
-       this.setState({note:19,name:"yassine"})
-    }
     render(){
+
+        const changeName = (event)=>{
+            this.setState({name:event.target.value})
+        }
         return(
             <div>
             Student Name :
+            <input type="text"  className="form-Control" onChange={changeName} />
+            Note 
             <input type="number"  className="form-Control" />
-            <button onChange={this.changeState} className="btn"  >Change State</button>
-            <div>hello This is  Student Section state saved one  student object his value is <span style={this.state.mystyle}> -- name : {this.state.name} </span> </div>
+
+            <button onClick={changeName} className="btn"  >Change State</button>
+            <div>hello This is  Student Section state saved one  student object his value is <span style={this.state.mystyle}> -- name : {this.state.name} </span>
+            ---- note {this.state.note}
+             </div>
             <div>
                 {this.props.myEmail}
             </div>

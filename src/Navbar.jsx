@@ -17,9 +17,11 @@ class Navbar extends Component{
     return(<>
             <div>welcome to Navbar</div>
             <nav className='nav'>
+            <Link to="/Students" style={this.state.mystyle} >Students</Link>
               <Link to="/Employee" style={this.state.mystyle} >Employee</Link>
               <Link to="/Users" style={this.state.mystyle}>Users</Link>
               <Link to="/Product" style={this.state.mystyle}>Product</Link>
+              <Link to="/Info" style={this.state.mystyle}>Info</Link>
 
             </nav>
 

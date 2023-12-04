@@ -19,10 +19,11 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path='/Student' element={<Student/>}/>
+        <Route path='/Students' element={<Student/>}/>
         <Route path='/Users' element={<User/>}/>
         <Route path='/Employee' element={<Employee/>}/>
         <Route path='/product' element={<Product/>}/>
+        <Route path='/Info' element={<Info hash="$112233"/>}/>
 
       </Routes>
       </BrowserRouter>
