@@ -1,0 +1,10 @@
+.emp {
+    background-color: rgb(87, 53, 53);
+    color: white;
+    width: 40%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

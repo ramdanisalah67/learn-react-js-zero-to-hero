@@ -1,5 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import about from './About';
+import Employee from './Employee';
+import Info from './Info';
+import Student from './Student'
+import User from './User';
+import Product from './Product'
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function App() {
   //declare variable
@@ -7,10 +15,18 @@ function App() {
   let note =18
   return (
     <div>
-   <h2>welcome {name} to your react app</h2>
-    {/*Conditions */}
-    {note>10? <p>Admis</p> : <p>Non Admis</p>}
-   <img src="logo192.png" alt="" />
+      {/* Routes */}
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/Student' element={<Student/>}/>
+        <Route path='/Users' element={<User/>}/>
+        <Route path='/Employee' element={<Employee/>}/>
+        <Route path='/product' element={<Product/>}/>
+
+      </Routes>
+      </BrowserRouter>
+     
    </div>
   );
 }
